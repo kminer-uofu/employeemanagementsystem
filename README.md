@@ -30,8 +30,6 @@ Adding Employee:
 
 ## Links
 
-Live App: https://employeemanagement-kminer.herokuapp.com/
-
 Github Repository: https://github.com/kminer-uofu/employeemanagementsystem
 
-Video Demo: https://drive.google.com/file/d/1EoiPZ4Pe0Nf1IEghrWk6fGeQWfOh2HdE/view
+Video Demo: https://drive.google.com/file/d/1-Qz0UzsRnrO7F4MoxrIaWN683HhvgPi4/view
