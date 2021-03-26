@@ -8,7 +8,7 @@ init();
 
 // Display logo text, load main prompts
 function init() {
-  const logoText = logo({ name: "Employee Manager 5000" }).render();
+  const logoText = logo({ name: "Employee Manager" }).render();
 
   console.log(logoText);
 
@@ -25,12 +25,12 @@ function loadPrompts() {
         message: "What would you like to do?",
         choices: [
           "View all Employees",
-          "View all Employees by Department",
-          "View all Employees by Manager",
+          "View all Departments",
+          "View all Roles",
           "Add Employee",
-          "Remove Emoployee",
-          "Update Employee Role",
-          "Update Employee Manager"
+          "Add Department",
+          "Add Role",
+          "Update Employee Role"
         ]
       })
     .then(function (answer) {
@@ -39,30 +39,18 @@ function loadPrompts() {
       switch (answer.action) {
         case "View all Employees":
           return viewEmployees();
-        case "View all Employees by Department":
-          return viewByDepartment();
-        case "View all Employees by Manager":
-          return viewByManager();
-        case "Add Employee":
-          return addEmployee();
-        case "Remove Employee":
-          return removeEmployee();
-        case "Update Employee Role":
-          return updateRole();
-        case "Update Manager":
-          return updateManager();
         case "View all Departments":
           return viewDepartments();
-        case "AddDeparment":
-          return addDepartment();
-        case "RemoveDepartment":
-          return removeDepartment();
-        case "ViewRoles":
+        case "View all Roles":
           return viewRoles();
-        case "AddRole":
+        case "Add Employee":
+          return addEmployee();
+        case "Update Employee Role":
+          return updateRole();
+        case "Add Deparment":
+          return addDepartment();
+        case "Add Role":
           return addRole();
-        case "RemoveRole":
-          return removeRole();
         default:
           return quit();
       }
@@ -78,24 +66,24 @@ async function viewEmployees() {
   loadPrompts();
 }
 // this function was taken from the main solution
-async function viewByDepartment() {
-  const dpts = await db.findAllDpts();
+async function viewDepartments() {
+  const employees = await db.findAllDpts();
 
-  const dptChoices = dpts.map(({ id, name }) => ({
-    name: name,
-    value: id
-  }));
+  // const dptChoices = dpts.map(({ id, name }) => ({
+  //   name: name,
+  //   value: id
+  // }));
 
-  const { dptId } = await prompt([
-    {
-      type: "list",
-      name: "dptId",
-      message: "Which department would you like to see employees for?",
-      choices: dptChoices
-    }
-  ]);
+  // const { dptId } = await prompt([
+  //   {
+  //     type: "list",
+  //     name: "dptId",
+  //     message: "Which department would you like to see employees for?",
+  //     choices: dptChoices
+  //   }
+  // ]);
 
-  const employees = await db.findAllEmployeesByDepartment(dptId);
+  // const employees = await db.findAllEmployeesByDepartment(dpts);
 
   console.log("\n");
   console.table(employees);
@@ -104,7 +92,7 @@ async function viewByDepartment() {
   loadPrompts();
 }
 
-async function viewByManager() {
+async function viewManagers() {
   const mgrs = await db.findAllEmployees();
 
   const mgrChoices = mgrs.map(({ id, first_name, last_name }) => ({
@@ -156,7 +144,7 @@ async function removeEmployee() {
 
   console.log("Removed employee from the database");
 
-  loadMainPrompts();
+  loadPrompts();
 }
 
 async function updateEmployeeRole() {
@@ -196,7 +184,7 @@ async function updateEmployeeRole() {
 
   console.log("Updated employee's role");
 
-  loadMainPrompts();
+  loadPrompts();
 }
 
 async function updateEmployeeManager() {
@@ -237,7 +225,7 @@ async function updateEmployeeManager() {
 
   console.log("Updated employee's manager");
 
-  loadMainPrompts();
+  loadPrompts();
 }
 
 async function viewRoles() {
@@ -246,7 +234,7 @@ async function viewRoles() {
   console.log("\n");
   console.table(roles);
 
-  loadMainPrompts();
+  loadPrompts();
 }
 
 async function addRole() {
@@ -278,7 +266,7 @@ async function addRole() {
 
   console.log(`Added ${role.title} to the database`);
 
-  loadMainPrompts();
+  loadPrompts();
 }
 
 async function removeRole() {
@@ -303,7 +291,7 @@ async function removeRole() {
 
   console.log("Removed role from the database");
 
-  loadMainPrompts();
+  loadPrompts();
 }
 
 async function viewDepartments() {
@@ -312,7 +300,7 @@ async function viewDepartments() {
   console.log("\n");
   console.table(departments);
 
-  loadMainPrompts();
+  loadPrompts();
 }
 
 async function addDepartment() {
@@ -327,7 +315,7 @@ async function addDepartment() {
 
   console.log(`Added ${department.name} to the database`);
 
-  loadMainPrompts();
+  loadPrompts();
 }
 
 async function removeDepartment() {
@@ -350,7 +338,7 @@ async function removeDepartment() {
 
   console.log(`Removed department from the database `);
 
-  loadMainPrompts();
+  loadPrompts();
 }
 
 async function addEmployee() {
@@ -403,7 +391,7 @@ async function addEmployee() {
     `Added ${employee.first_name} ${employee.last_name} to the database`
   );
 
-  loadMainPrompts();
+  loadPrompts();
 }
 
 function quit() {
