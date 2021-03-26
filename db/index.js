@@ -9,14 +9,14 @@ class DB {
   // Find all employees, join with roles and departments to display their roles, salaries, departments, and managers
   findAllEmployees() {
     return this.connection.query(
-      "SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department on role.department_id = department.id LEFT JOIN employee manager on manager.id = employee.manager_id;"
+      "SELECT * FROM employee"
     );
   }
 
   // Find all employees except the given employee id
   findAllPossibleManagers(employeeId) {
     return this.connection.query(
-      "SELECT id, first_name, last_name FROM employee WHERE id != ?",
+      "SELECT * FROM employee WHERE id != ?",
       employeeId
     );
   }
@@ -68,9 +68,9 @@ class DB {
   }
 
   // Find all departments, join with employees and roles and sum up utilized department budget
-  findAllDepartments() {
+  findAllDpts() {
     return this.connection.query(
-      "SELECT department.id, department.name, SUM(role.salary) AS utilized_budget FROM department LEFT JOIN role ON role.department_id = department.id LEFT JOIN employee ON employee.role_id = role.id GROUP BY department.id, department.name"
+      "SELECT * FROM department"
     );
   }
 
@@ -87,10 +87,10 @@ class DB {
     );
   }
 
-  // Find all employees in a given department, join with roles to display role titles
+  // Find all employees in a given department, join with roles to display role titles this function was taken from the main solution
   findAllEmployeesByDepartment(departmentId) {
     return this.connection.query(
-      "SELECT employee.id, employee.first_name, employee.last_name, role.title FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department department on role.department_id = department.id WHERE department.id = ?;",
+      "SELECT * FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department department on role.department_id = department.id WHERE department.id = ?;",
       departmentId
     );
   }
