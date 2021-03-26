@@ -65,9 +65,9 @@ async function viewEmployees() {
 
   loadPrompts();
 }
-// this function was taken from the main solution
+
 async function viewDepartments() {
-  const employees = await db.findAllDpts();
+  const employees = await db.findAllDepartments();
 
   
   console.log("\n");
@@ -123,7 +123,7 @@ async function viewRoles() {
 
   console.log("\n");
   console.table(roles);
-
+  console.log("\n")
   loadPrompts();
 }
 
