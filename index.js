@@ -30,7 +30,8 @@ function loadPrompts() {
           "Add Employee",
           "Add Department",
           "Add Role",
-          "Update Employee Role"
+          "Update Employee Role",
+          "Quit"
         ]
       })
     .then(function (answer) {
@@ -47,7 +48,7 @@ function loadPrompts() {
           return addEmployee();
         case "Update Employee Role":
           return updateEmployeeRole();
-        case "Add Deparment":
+        case "Add Department":
           return addDepartment();
         case "Add Role":
           return addRole();
