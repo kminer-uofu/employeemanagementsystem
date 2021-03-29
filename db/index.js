@@ -40,7 +40,7 @@ class DB {
     return this.connection.query("INSERT INTO role SET ?", role);
   }
 
-  // Find all departments, join with employees and roles and sum up utilized department budget
+  // Find all departments
   findAllDepartments() {
     return this.connection.query(
       "SELECT id, name AS department FROM department"

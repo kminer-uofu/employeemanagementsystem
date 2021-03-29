@@ -186,6 +186,7 @@ async function addDepartment() {
   loadPrompts();
 }
 
+// add Employee function was taken from the main solution.
 async function addEmployee() {
   const roles = await db.findAllRoles();
   const employees = await db.findAllEmployees();
