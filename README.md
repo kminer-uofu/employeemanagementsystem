@@ -1,6 +1,6 @@
 # employeemanagementsystem
 
-This is a node and express server employee management system, it is designed to be able to enter employees and managers with the designated positions. You can add, update, and delete them however you choose.
+This is a node and express server employee management system, it is designed to be able to enter employees and managers with the designated positions. You can add, update, and view them however you choose.
 
 ## Examples
 
@@ -12,13 +12,13 @@ Showing employees in database:
 
 ![Screen Shot 2021-03-21 at 9 50 13 AM](https://user-images.githubusercontent.com/70558063/111911352-df077700-8a2a-11eb-82fc-acdc576293d6.png)
 
-Showing employees by Department:
+Showing Departments:
 
 ![Screen Shot 2021-03-21 at 9 51 56 AM](https://user-images.githubusercontent.com/70558063/111911402-183fe700-8a2b-11eb-81d7-9c00754137c8.png)
 
 ![Screen Shot 2021-03-21 at 9 53 12 AM](https://user-images.githubusercontent.com/70558063/111911436-44f3fe80-8a2b-11eb-9d94-e101bdd5ca3f.png)
 
-Showing employees by Manager:
+Showing roles:
 
 ![Screen Shot 2021-03-21 at 9 54 23 AM](https://user-images.githubusercontent.com/70558063/111911472-6e148f00-8a2b-11eb-9d18-5d56f03212e3.png)
 

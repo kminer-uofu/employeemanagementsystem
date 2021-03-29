@@ -124,7 +124,8 @@ async function viewRoles() {
 
   console.log("\n");
   console.table(roles);
-  console.log("\n")
+  console.log("\n");
+
   loadPrompts();
 }
 
@@ -165,6 +166,7 @@ async function viewDepartments() {
 
   console.log("\n");
   console.table(departments);
+  console.log("\n");
 
   loadPrompts();
 }
