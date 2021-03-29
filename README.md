@@ -6,24 +6,24 @@ This is a node and express server employee management system, it is designed to 
 
 This is the initial load screen:
 
-![Screen Shot 2021-03-21 at 9 48 05 AM](https://user-images.githubusercontent.com/70558063/111911292-918b0a00-8a2a-11eb-9891-6feeec752323.png)
+![Screen Shot 2021-03-29 at 5 09 48 PM](https://user-images.githubusercontent.com/70558063/112911016-c5f96880-90b1-11eb-8ddc-abff1b4fb673.png)
 
 Showing employees in database: 
 
-![Screen Shot 2021-03-21 at 9 50 13 AM](https://user-images.githubusercontent.com/70558063/111911352-df077700-8a2a-11eb-82fc-acdc576293d6.png)
+![Screen Shot 2021-03-29 at 5 12 13 PM](https://user-images.githubusercontent.com/70558063/112911082-ed503580-90b1-11eb-9749-633d275e6ef1.png)
 
 Showing Departments:
 
-![Screen Shot 2021-03-21 at 9 51 56 AM](https://user-images.githubusercontent.com/70558063/111911402-183fe700-8a2b-11eb-81d7-9c00754137c8.png)
-
-![Screen Shot 2021-03-21 at 9 53 12 AM](https://user-images.githubusercontent.com/70558063/111911436-44f3fe80-8a2b-11eb-9d94-e101bdd5ca3f.png)
+![Screen Shot 2021-03-29 at 5 13 00 PM](https://user-images.githubusercontent.com/70558063/112911134-0953d700-90b2-11eb-8fb0-f283f45d8713.png)
 
 Showing roles:
 
-![Screen Shot 2021-03-21 at 9 54 23 AM](https://user-images.githubusercontent.com/70558063/111911472-6e148f00-8a2b-11eb-9d18-5d56f03212e3.png)
+![Screen Shot 2021-03-29 at 5 14 17 PM](https://user-images.githubusercontent.com/70558063/112911238-37391b80-90b2-11eb-9c2d-e6c84cb6d6a3.png)
+
 
 Adding Employee:
-![Screen Shot 2021-03-21 at 9 57 19 AM](https://user-images.githubusercontent.com/70558063/111911589-d8c5ca80-8a2b-11eb-818f-dab6342466ef.png)
+
+![Screen Shot 2021-03-29 at 5 15 05 PM](https://user-images.githubusercontent.com/70558063/112911281-53d55380-90b2-11eb-81c5-04ccc9b69fbe.png)
 
 
 
@@ -32,4 +32,4 @@ Adding Employee:
 
 Github Repository: https://github.com/kminer-uofu/employeemanagementsystem
 
-Video Demo: https://drive.google.com/file/d/1-Qz0UzsRnrO7F4MoxrIaWN683HhvgPi4/view
+Video Demo: https://drive.google.com/file/d/1xPiPS8-u7OHbrGzJSfIOMuS1hl6DjTUr/view
